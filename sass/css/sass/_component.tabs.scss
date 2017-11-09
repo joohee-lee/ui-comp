@@ -1,0 +1,89 @@
+.tabs{
+    width: 100%;
+    overflow: hidden;
+    //background-color: #ddd;
+    //@extend %clearfix;
+    @include clearfix();
+
+    &[data-current="0"] .tabs-item[data-idx="0"] a,
+    &[data-current="1"] .tabs-item[data-idx="1"] a,
+    &[data-current="2"] .tabs-item[data-idx="2"] a,
+    &[data-current="3"] .tabs-item[data-idx="3"] a{
+        background-color: #ddd;
+        color: #000;
+    }
+
+    &-panel{
+        //@extend .none;
+        @extend %none;
+        border: 1px solid #ddd;
+        @include border-radius(4px);
+        @include rem(padding, 10px);
+        @include rem(margin-bottom, 10px);
+    }
+
+    &[data-current="0"] &-panel[data-idx="0"],
+    &[data-current="1"] &-panel[data-idx="1"],
+    &[data-current="2"] &-panel[data-idx="2"],
+    &[data-current="3"] &-panel[data-idx="3"]{
+        //@extend .block;
+        @extend %block;
+    }
+
+    &-list{
+        border-bottom: 1px solid #ddd;
+        @include clearfix();
+    }
+
+    &-item{ float: left; }
+
+    &-item a{
+        display: block;
+        border: 1px solid #ddd;
+        border-bottom: 0;
+
+        @include border-top-radius(4px);
+        @include rem(margin-right, 4px);
+        @include rem(padding, 5px 10px);
+        @include box-sizing(border-box);
+        @include rem(font-size, 18px);
+
+        &:hover{
+        background-color: #eee;
+        }
+
+        // include media-query
+        @include media-query($on-small) {
+            @include rem(padding, 5px 5px);
+        }
+    }
+}
+
+/*
+.tabs-list{
+    border-bottom: 1px solid #ddd;
+
+    .tabs-item{
+        float: left;
+    }
+
+    .tabs-item a{
+        display: block;
+        border: 1px solid #ddd;
+        border-bottom: 0;
+
+        @include border-top-radius(4px);
+        @include rem(margin-right, 4px);
+        @include rem(padding, 5px 10px);
+        @include box-sizing(border-box);
+        @include rem(font-size, 18px);
+
+        &:hover{
+        background-color: #eee;
+        }
+    }
+
+    @include clearfix();
+}
+*/
+

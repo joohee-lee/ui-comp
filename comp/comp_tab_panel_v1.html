@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="googlebot" content="noindex,nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>comp-tab &amp; panel</title>
+    <!-- main -->
+    <link rel="stylesheet" href="../sass/css/main.css">
+</head>
+<body>
+    <h1>Tabs</h1>
+    <h2>tab + panel </h2>
+    <div id="comptTabs1" class="tabs" data-current="0">
+        <ul class='tabs-list'>
+            <li class="tabs-item" role="tab" data-idx="0"><a href="#" onclick="tabs1SetCurrent(0); return false;">tab-0</a></li>
+            <li class="tabs-item" role="tab" data-idx="1"><a href="#" onclick="tabs1SetCurrent(1); return false;">tab-1</a></li>
+            <li class="tabs-item" role="tab" data-idx="2"><a href="#" onclick="tabs1SetCurrent(2); return false;">tab-2</a></li>
+            <li class="tabs-item" role="tab" data-idx="3"><a href="#" onclick="tabs1SetCurrent(3); return false;">tab-3</a></li>
+        </ul>
+
+        <div class='tabs-panel' role="panel" data-idx="0" data-display="true">
+            <h3 tabindex="0">tab-0-title</h3>
+            tab-0-contents
+        </div>
+        <div class='tabs-panel' role="panel" data-idx="1">
+            <h3 tabindex="0">tab-1-title</h3>
+            tab-1-contents
+        </div>
+        <div class='tabs-panel' role="panel" data-idx="2">
+            <h3 tabindex="0">tab-2-title</h3>
+            tab-2-contents
+        </div>
+        <div class='tabs-panel' role="panel" data-idx="3">
+            <h3 tabindex="0">tab-3-title</h3>
+            tab-3-contents
+        </div>
+
+        <div class="tabs-control">
+            <button type="button" id="btnPre" class="btn" onclick="">prev</button>
+            <button type="button" id="btnNext" class="btn" onclick="">next</button>
+        </div>
+    </div>
+
+    <section class="section-note">
+        <h2> Note: </h2>
+        <p>This example uses</p>
+        <div class="note">
+            <p># _component.tabs.scss</p>
+            <ol>
+                <li>1. 'data-current' to show what tab / tab panel is selected  </li>
+                <li>2. Roles used are : tab and panel.</li>
+                <li>3. CSS selectors are used to bind " data-current ",&amp; "data-idx" and CSS display:block.</li>
+                <li>4. prev / next add </li>
+            </ol>
+        </div>
+    </section>
+
+    <script>
+    /* dataset - dh.kim guide */
+    var cc = {
+        repaint: function(el) {
+            el.className = el.className;
+        },
+        setAttr: function(el, key, val) {
+            el.setAttribute(key, val);
+        },
+        getAttr: function(el, key) {
+            return el.getAttribute(key);
+        }
+    };
+
+    // setCurrent
+    var setCurrent = function (el, idx){
+        cc.setAttr( el, 'data-current', idx);
+        cc.repaint( el );
+    }
+
+   //dom element selector
+   var comptTabs1 = document.getElementById('comptTabs1');
+   var btnPrev = document.getElementById('btnPre');
+   var btnNext = document.getElementById('btnNext');
+
+   //총 count
+   var count = comptTabs1.getElementsByTagName('li').length;
+   var current = 0;
+   var current_sum;
+
+   //rollilng
+   var time = 2000;
+
+    //tab
+   var tabs1SetCurrent = function(idx){
+            setCurrent(comptTabs1, idx);
+   };
+
+   // next
+   btnNext.onclick = function(){
+
+        current = Number(current + 1);
+
+        if (current === count ){
+            current = 0;
+        }
+
+        //console.log(current);
+        setCurrent(comptTabs1, current);
+   };
+
+   //prev
+   btnPrev.onclick = function(){
+
+        current = current - 1;
+
+        if (current < 0 ){
+            current = count - 1;
+        }
+
+        //console.log(current);
+        setCurrent(comptTabs1, current);
+   }
+
+ </script>
+</body>
+</html>
