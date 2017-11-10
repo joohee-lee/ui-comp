@@ -1,0 +1,58 @@
+
+%arrow{
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-top: 7px solid;
+  border-right: 7px solid;
+  margin: 15px;
+}
+
+%arrow-left{
+    @extend %arrow;
+    transform: rotate(45deg);
+}
+
+%arrow-up{
+    @extend %arrow;
+    transform: rotate(-45deg);
+}
+
+%arrow-right{
+    @extend %arrow;
+    transform: rotate(-135deg);
+}
+
+%arrow-down{
+    @extend %arrow;
+    transform: rotate(135deg);
+}
+
+/*
+[class*="icono-arrow4"] {
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-top: 7px solid;
+  border-right: 7px solid;
+  margin: 15px; }
+[class*="icono-arrow4"][class*="-left"] {
+  transform: rotate(45deg); }
+[class*="icono-arrow4"][class*="-left"][class*="-up"] {
+  transform: none; }
+[class*="icono-arrow4"][class*="-left"][class*="-down"] {
+  transform: rotate(90deg); }
+[class*="icono-arrow4"][class*="-right"] {
+  transform: rotate(-135deg); }
+[class*="icono-arrow4"][class*="-right"][class*="-up"] {
+  transform: rotate(-90deg); }
+[class*="icono-arrow4"][class*="-right"][class*="-down"] {
+  transform: rotate(180deg); }
+[class*="icono-arrow4"][class*="-up"] {
+  transform: rotate(-45deg); }
+[class*="icono-arrow4"][class*="-down"] {
+  transform: rotate(135deg); }
+  */
+
+
+

@@ -1,0 +1,16 @@
+.menubar{
+    &-item {
+        float:left;
+        @include rem(padding 10px, 10px)
+    }
+    &-item:after{
+        @extend %arrow-down;
+    }
+
+    &-item .menu[aria-expanded="false"]{ display: none;}
+
+    @include clearfix();
+}
+
+
+

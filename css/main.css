@@ -337,6 +337,42 @@ pre {
       .post-content h4 {
         font-size: 18px; } }
 
+.menubar-item:after {
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-top: 7px solid;
+  border-right: 7px solid;
+  margin: 15px; }
+
+.menubar-item:after {
+  transform: rotate(135deg); }
+
+/*
+[class*="icono-arrow4"] {
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-top: 7px solid;
+  border-right: 7px solid;
+  margin: 15px; }
+[class*="icono-arrow4"][class*="-left"] {
+  transform: rotate(45deg); }
+[class*="icono-arrow4"][class*="-left"][class*="-up"] {
+  transform: none; }
+[class*="icono-arrow4"][class*="-left"][class*="-down"] {
+  transform: rotate(90deg); }
+[class*="icono-arrow4"][class*="-right"] {
+  transform: rotate(-135deg); }
+[class*="icono-arrow4"][class*="-right"][class*="-up"] {
+  transform: rotate(-90deg); }
+[class*="icono-arrow4"][class*="-right"][class*="-down"] {
+  transform: rotate(180deg); }
+[class*="icono-arrow4"][class*="-up"] {
+  transform: rotate(-45deg); }
+[class*="icono-arrow4"][class*="-down"] {
+  transform: rotate(135deg); }
+  */
 .tabs {
   width: 100%;
   overflow: hidden; }
@@ -434,5 +470,49 @@ pre {
   background-clip: padding-box;
   padding: 5px 10px;
   padding: 0.3125rem 0.625rem; }
+
+.breadcrumb {
+  border: 1px solid #ddd;
+  padding: 10px;
+  padding: 0.625rem;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-clip: padding-box; }
+  .breadcrumb li {
+    float: left; }
+  .breadcrumb li + li:before {
+    content: '';
+    display: inline-block;
+    clear: both;
+    /* "/"
+    font-weight: bold;
+    transform: rotate(15deg);
+    border-right: 2px solid #000;
+    height: 10px;
+    */
+    height: 8px;
+    width: 8px;
+    border: 1px solid #000;
+    border-width: 2px 2px 0 0;
+    transform: rotate(45deg);
+    margin: 0 10px;
+    margin: 0 0.625rem; }
+  .breadcrumb:before, .breadcrumb:after {
+    content: "";
+    display: table; }
+  .breadcrumb:after {
+    clear: both; }
+
+.menubar-item {
+  float: left;
+  padding 10px: 10px;
+  padding 10px: 0.625rem; }
+.menubar-item .menu[aria-expanded="false"] {
+  display: none; }
+.menubar:before, .menubar:after {
+  content: "";
+  display: table; }
+.menubar:after {
+  clear: both; }
 
 /*# sourceMappingURL=main.css.map */

@@ -49,9 +49,17 @@ $on-laptop:        800px;
 @import "sass/layout";
 @import "sass/mixins";
 
+//utillities
+@import "sass/utilities";
+
+//object
+@import "sass/arrow";
+
 //components
 @import "sass/component.tabs";
 @import "sass/component.button";
+@import "sass/component.breadcrumb";
+@import "sass/component.menubar";
 
 
 

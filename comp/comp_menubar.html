@@ -6,13 +6,66 @@
     <meta name="robots" content="noindex,nofollow">
     <meta name="googlebot" content="noindex,nofollow">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>comp-menubar</title>
+    <title>menubar</title>
     <!-- main -->
-    <link rel="stylesheet" href="../sass/css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <h1>menubar</h1>
-    <h2>menu</h2>
+    <h2>1. menubar</h2>
+
+    <div class="cmpt-menu">
+        <nav>
+            <ul class="menubar" role="menubar">
+                <li class="menubar-item" role="menuitem"><a href="#">A menu</a>
+                    <ul class="menu" role="menu" aria-expanded="false">
+                        <li><a href="#">subitem--1</a></li>
+                        <li><a href="#">subitem--2</a></li>
+                        <li><a href="#">subitem--3</a></li>
+                    </ul>
+                </li>
+                <li class="menubar-item" role="menuitem"><a href="#">B menu</a>
+                     <ul class="menu" role="menu" aria-expanded="false">
+                        <li><a href="#">subitem--1</a></li>
+                        <li><a href="#">subitem--2</a></li>
+                        <li><a href="#">subitem--3</a></li>
+                    </ul>
+                </li>
+                <li class="menubar-item" role="menuitem"><a href="#">C menu</a>
+                      <ul class="" role="menu" aria-expanded="false">
+                        <li><a href="#">subitem--1</a></li>
+                        <li><a href="#">subitem--2</a></li>
+                        <li><a href="#">subitem--3</a></li>
+                      </ul>
+                </li>
+                <li class="menubar-item" role="menuitem"><a href="#">D menu</a>
+                      <ul class="menu" role="menu" aria-expanded="false">
+                        <li><a href="#">subitem--1</a></li>
+                        <li><a href="#">subitem--2</a></li>
+                        <li><a href="#">subitem--3</a></li>
+                      </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="section-note">
+        <h2> Note: </h2>
+        <p>This example uses</p>
+        <div class="note">
+            <p>#  _component.menubar.scss</p>
+            <ol>
+                <li>1. menubar  </li>
+                <li>2. Roles used are :  nav(navigation), menu, submenu and menuitem </li>
+            </ol>
+            <div class="div-ref">
+                <ul>
+                    <li><a href="https://www.w3.org/TR/wai-aria-practices/" target="_blank">https://www.w3.org/TR/wai-aria-practices/</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
 
 </body>
 </html>
