@@ -1,15 +1,65 @@
+.cmpt-menu{
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    @include clearfix();
+    & nav{ position: relative; }
+
+    // include media-query
+    @include media-query(500px) {
+        & nav{ position: inherit; }
+    }
+}
+
 .menubar{
+    margin-bottom: 0;
+
     &-item {
         float:left;
-        @include rem(padding 10px, 10px)
-    }
-    &-item:after{
-        @extend %arrow-down;
     }
 
-    &-item .menu[aria-expanded="false"]{ display: none;}
+    &-item  a{
+        display: block;
+        @include rem(padding, 10px 10px);
+    }
+
+    &-item > a:after{
+        content:'';
+        display: inline-block;
+        @extend %arrow-down;
+        margin: 2px 10px;
+    }
+
+    &-item .menu{
+        position:absolute;
+        @extend %none;
+        border: 1px solid #ddd;
+        background-color: #fff;
+    }
+
+    &-item a:hover + .menu, .menu:hover{
+        @extend %block;
+    }
 
     @include clearfix();
+
+    // include media-query
+    @include media-query(500px) {
+        &-item {
+            float: inherit;
+            display: block;
+            width: 100%;
+        }
+
+        &-item > a:after{
+            float: right;
+        }
+
+        &-item .menu{
+            position:static;
+        }
+
+    }
+
 }
 
 
