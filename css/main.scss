@@ -56,10 +56,12 @@ $on-laptop:        800px;
 @import "sass/arrow";
 
 //components
+@import "sass/component.login";
 @import "sass/component.tabs";
 @import "sass/component.button";
 @import "sass/component.breadcrumb";
 @import "sass/component.menubar";
+@import "sass/component.responsivetable";
 
 
 

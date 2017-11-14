@@ -1,0 +1,83 @@
+
+// responsive table
+$responsive-card-table-bottom-gap: 1.5rem;
+$responsive-card-table-border: 1px solid #000;
+$responsive-card-table-stack-point: 640px;
+$responsive-card-table-label-bg: #ddd;
+
+.responsive-card-table {
+
+  &.unstriped tbody {
+    background-color: transparent;
+  }
+
+  th {
+    background-color: $responsive-card-table-label-bg;
+  }
+
+  th,
+  td{
+    @include rem(padding, 10px);
+  }
+
+  tr,
+  th,
+  td {
+    border: $responsive-card-table-border;
+  }
+  // include media-query
+    @include media-query(600px) {
+        thead tr {
+          position: absolute;
+          top: -9999em;
+          left: -9999em;
+        }
+
+        tr {
+              border: $responsive-card-table-border;
+              border-bottom: 0;
+              display: block;
+        }
+
+        tr + tr {
+          margin-top: $responsive-card-table-bottom-gap;
+        }
+
+        td {
+          border: none;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          border-bottom: $responsive-card-table-border;
+          padding-left: 50%;
+          position: relative;
+
+          &:before {
+            position: relative;
+            content: attr(data-label);
+            display: inline-block;
+            font-weight: bold;
+            line-height: 1.5;
+            margin-left: -100%;
+            width: 100%;
+            z-index: 1;
+            box-sizing: inherit;
+          }
+
+          &:after {
+            content: '';
+            position: absolute;
+            background: $responsive-card-table-label-bg;
+            width: 45%;
+            height: 95%;
+            left: 1px;
+            top: 1px;
+            z-index: 0;
+            box-sizing: inherit;
+          }
+        }
+
+    }
+}
+
+

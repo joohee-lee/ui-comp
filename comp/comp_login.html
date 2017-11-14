@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="googlebot" content="noindex,nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>comp-login</title>
+    <!-- main -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <h1>Login</h1>
+    <h2>Login-Form</h2>
+
+    <div class="comp-login">
+        <form action="">
+            <fieldset class="fieldset-login">
+                <legend>Login Form</legend>
+                <div>
+                    <label for="username">Your username</label>
+                    <input type="text" id="username" aria-describedby="username-tip" required />
+                    <div role="tooltip" id="username-tip">Your username is your email address</div>
+                </div>
+                <div>
+                    <label for="password">Your password</label>
+                    <input type="password" id="password" aria-describedby="password-tip" required />
+                    <div role="tooltip" id="password-tip">Was emailed to you when you signed up</div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <section class="section-note">
+        <h2> Note: </h2>
+        <p>This example uses</p>
+        <div class="note">
+            <p>#  _component.login.scss</p>
+            <ol>
+                <li>1. attributes of input ( html5 ) : required used  </li>
+                <li>2. Roles used are : role="tooltip".</li>
+                <li>3. no script</li>
+            </ol>
+        </div>
+    </section>
+
+</body>
+</html>
