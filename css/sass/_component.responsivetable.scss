@@ -52,34 +52,34 @@ $responsive-card-table-label-bg: #ddd;
           border: none;
           display: block;
           border-bottom: $responsive-card-table-border;
+          @include rem(font-size, 14px);
 
               &:before {
                 content: attr(data-label);
                 float: left;
                 font-weight: bold;
                 text-transform: uppercase;
-                width: 40%;
-                @include rem(font-size, 12px);
-                border-bottom: 2px solid yellow;
+                width: 38%;
+                padding: 1% 3%;
               }
 
               span{
                display: block;
                float: right;
-               width: 60%;
-              }
+               width: 50%;
+               padding:1% 3%;
 
+              }
 
               &:after {
                 content: '';
                 display: table;
                 clear: both;
               }
-
-
         }
+    } // media auery
 
-    }
+
 }
 
 
