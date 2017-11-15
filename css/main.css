@@ -594,10 +594,15 @@ pre {
 .responsive-card-table td {
   border: 1px solid #000; }
 @media screen and (max-width: 600px) {
-  .responsive-card-table thead tr {
+  .responsive-card-table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
     position: absolute;
-    top: -9999em;
-    left: -9999em; }
+    width: 1px; }
   .responsive-card-table tr {
     border: 1px solid #000;
     border-bottom: 0;
@@ -606,31 +611,24 @@ pre {
     margin-top: 1.5rem; }
   .responsive-card-table td {
     border: none;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    border-bottom: 1px solid #000;
-    padding-left: 50%;
-    position: relative; }
+    display: block;
+    border-bottom: 1px solid #000; }
     .responsive-card-table td:before {
-      position: relative;
       content: attr(data-label);
-      display: inline-block;
+      float: left;
       font-weight: bold;
-      line-height: 1.5;
-      margin-left: -100%;
-      width: 100%;
-      z-index: 1;
-      box-sizing: inherit; }
+      text-transform: uppercase;
+      width: 40%;
+      font-size: 12px;
+      font-size: 0.75rem;
+      border-bottom: 2px solid yellow; }
+    .responsive-card-table td span {
+      display: block;
+      float: right;
+      width: 60%; }
     .responsive-card-table td:after {
       content: '';
-      position: absolute;
-      background: #ddd;
-      width: 45%;
-      height: 95%;
-      left: 1px;
-      top: 1px;
-      z-index: 0;
-      box-sizing: inherit; } }
+      display: table;
+      clear: both; } }
 
 /*# sourceMappingURL=main.css.map */
