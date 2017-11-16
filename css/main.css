@@ -344,6 +344,10 @@ pre {
       .post-content h4 {
         font-size: 18px; } }
 
+/**
+ * color variables
+ *  https://davidwalsh.name/sass-color-variables-dont-suck
+ */
 .menubar-item > a:after {
   width: 0;
   height: 0;
@@ -631,5 +635,45 @@ pre {
       content: '';
       display: table;
       clear: both; } }
+
+.comp-card {
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-clip: padding-box; }
+
+.card {
+  text-align: left; }
+  .card-img figure {
+    padding: 10px 10px 0;
+    padding: 0.625rem 0.625rem 0; }
+  .card-img img {
+    width: 100%;
+    max-width: 100%; }
+  .card:before, .card:after {
+    content: "";
+    display: table; }
+  .card:after {
+    clear: both; }
+
+.media {
+  margin: 0 10px;
+  margin: 0 0.625rem; }
+  .media-img {
+    float: left;
+    margin-right: 10px;
+    width: 80px; }
+  .media-content {
+    float: left;
+    width: 61.5%; }
+  .media-content .sp-subtitle {
+    font-size: 14px;
+    font-size: 0.875rem;
+    color: #1C39BB; }
+  .media:before, .media:after {
+    content: "";
+    display: table; }
+  .media:after {
+    clear: both; }
 
 /*# sourceMappingURL=main.css.map */

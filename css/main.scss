@@ -48,6 +48,7 @@ $on-laptop:        800px;
 @import "sass/base";
 @import "sass/layout";
 @import "sass/mixins";
+@import "sass/color";
 
 //utillities
 @import "sass/utilities";
@@ -62,7 +63,7 @@ $on-laptop:        800px;
 @import "sass/component.breadcrumb";
 @import "sass/component.menubar";
 @import "sass/component.responsivetable";
-//@import "sass/component.card";
+@import "sass/component.cards";
 
 
 

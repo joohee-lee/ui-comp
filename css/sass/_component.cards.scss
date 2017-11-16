@@ -1,3 +1,45 @@
-// breadcrumb
+// card
+.comp-card{
+    border: 1px solid #ddd;
+    @include border-radius(4px);
+}
 
+// card section
+.card{
+    text-align: left;
 
+    &-img{}
+    &-img figure{
+
+        @include rem( padding, 10px 10px 0);
+
+    }
+
+    &-img img{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    @include clearfix();
+}
+
+// media
+.media{
+    @include rem(margin, 0 10px);
+    &-img{
+        float: left;
+        margin-right: 10px;
+        width: 80px;
+    }
+    &-content{
+        float: left;
+        width: 61.5%;
+    }
+    &-content span{}
+    &-content .sp-subtitle{
+        @include rem( font-size, 14px );
+        color: $color-persian-blue;
+    }
+
+    @include clearfix();
+}
