@@ -491,22 +491,85 @@ pre {
     @include clearfix();
 }
 */
-.btn {
+.div-buttons {
+  margin-top: 20px; }
+
+.button {
   display: inline-block;
+  padding: 10px;
+  padding: 0.625rem;
+  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 0;
-  font-weight: bold;
-  text-align: center;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: none;
   border: 1px solid transparent;
-  border-color: #ddd;
-  white-space: nowrap;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   background-clip: padding-box;
-  padding: 5px 10px;
-  padding: 0.3125rem 0.625rem; }
+  cursor: pointer;
+  font-weight: 500;
+  text-align: center;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-appearance: none; }
+  .button--default {
+    background-image: -webkit-linear-gradient(top, #fafafa 0%, #eaeaea 100%);
+    background-image: -o-linear-gradient(top, #fafafa 0%, #eaeaea 100%);
+    background-image: linear-gradient(to bottom, #fafafa 0%, #eaeaea 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffafafa', endColorstr='#ffeaeaea', GradientType=0);
+    border: 1px solid #ccc;
+    border-color: #ccc #bdbdbd #adadad;
+    color: #333;
+    text-shadow: 0 1px 0 white; }
+  .button--default:hover {
+    background-image: -webkit-linear-gradient(top, #fff 0%, #eee 100%);
+    background-image: -o-linear-gradient(top, #fff 0%, #eee 100%);
+    background-image: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffeeeeee', GradientType=0);
+    border-color: #bfbfbf #bfbfbf #b3b3b3;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    color: #333; }
+  .button--lg {
+    font-size: 20px;
+    font-size: 1.25rem; }
+  .button--sm {
+    font-size: 12px;
+    font-size: 0.75rem; }
+  .button--xs {
+    font-size: 10px;
+    font-size: 0.625rem; }
+  .button--primary {
+    background-image: -webkit-linear-gradient(top, #2591ed 0%, #1177cd 100%);
+    background-image: -o-linear-gradient(top, #2591ed 0%, #1177cd 100%);
+    background-image: linear-gradient(to bottom, #2591ed 0%, #1177cd 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2591ed', endColorstr='#ff1177cd', GradientType=0);
+    background-color: #1385e5;
+    border-color: #1177cd #0f6ab6 #0d5c9e;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    color: white;
+    font-weight: 400;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); }
+  .button--success {
+    background-image: -webkit-linear-gradient(top, #43cd4f 0%, #2fae39 100%);
+    background-image: -o-linear-gradient(top, #43cd4f 0%, #2fae39 100%);
+    background-image: linear-gradient(to bottom, #43cd4f 0%, #2fae39 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff43cd4f', endColorstr='#ff2fae39', GradientType=0);
+    background-color: #34c240;
+    border-color: #2fae39 #299a33 #24862c;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    color: white;
+    font-weight: 400;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); }
 
 .breadcrumb {
   border: 1px solid #ddd;
@@ -675,5 +738,38 @@ pre {
     display: table; }
   .media:after {
     clear: both; }
+
+.form {
+  margin: 0 auto; }
+
+.form__label-text {
+  display: inline-block;
+  padding: .5rem; }
+  .js .form__label-text {
+    opacity: 0;
+    transform: translateY(50%);
+    transition: all .2s ease-in-out; }
+    .js .form__label-text--floating {
+      opacity: 1;
+      transform: translateY(15%); }
+
+.form__text-input {
+  border: solid Silver 1px;
+  padding: .5rem;
+  width: 100%; }
+  .form__text-input::placeholder {
+    color: #767676; }
+
+.form__textarea {
+  min-height: 5rem;
+  width: 100%; }
+
+.form__btn {
+  background-color: RoyalBlue;
+  border: 0;
+  border-radius: .15rem;
+  color: White;
+  margin-top: 2rem;
+  padding: .5rem 1rem; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="googlebot" content="noindex,nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>comp-form</title>
+    <!-- main -->
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <article class="wrapper">
+
+    <h1>Accessible Floating - labels</h1>
+
+    <form action="/" method="GET" class="form">
+
+        <label for="name" class="form__label">
+            <span class="form__label-text">Your Name</span>
+            <input type="text" name="name" id="name" placeholder="Your Name" class="form__text-input">
+            <!-- <span class="form__error-text">Your name cannot be empty…</span> -->
+        </label>
+        <label for="phone" class="form__label">
+            <span class="form__label-text">Phone</span>
+            <input type="tel" name="phone" id="phone" placeholder="Phone (555-555-5555)" class="form__text-input">
+            <!-- <span class="form__error-text">Phone cannot be empty…</span> -->
+        </label>
+        <label for="message" class="form__label">
+            <span class="form__label-text">Message</span>
+            <textarea name="message" id="message" placeholder="Message, what's on your mind?" class="form__text-input form__textarea"></textarea>
+            <!-- <span class="form__error-text">Message cannot be empty…</span> -->
+        </label>
+        <button class="form__btn">Submit</button>
+    </form>
+</article>
+<script>
+'use strict';
+
+(function () {
+    var classes = {
+        textInput: '.form__text-input',
+        labelText: '.form__label-text',
+        labelTextFloating: 'form__label-text--floating'
+    };
+
+    var events = {
+        blur: 'blur',
+        keyUp: 'keyup'
+    };
+
+    // Collect all text input controls
+    var textInputs = document.querySelectorAll(classes.textInput);
+
+    // Let's float the label when the checked conditions are met
+    // for each input event listener
+    var floatLabel = function floatLabel(e) {
+        var eventType = e.type;
+        var textInput = e.target;
+        var labelText = textInput.parentNode.querySelector(classes.labelText);
+
+        // On `keyup`, if there's text in the input, show the label
+        if (eventType === events.keyUp && textInput.value.length !== 0) {
+            labelText.classList.add(classes.labelTextFloating);
+        }
+
+        // On `blur`, if there's no text in the input, hide the label
+        if (eventType === events.blur && textInput.value.length === 0) {
+            labelText.classList.remove(classes.labelTextFloating);
+        }
+    };
+
+    // Add `keyup` and `blur` events for each input
+    for (var _iterator = textInputs, _isArray = Array.isArray(_iterator), _i = 0, _iterator = _isArray ? _iterator : _iterator[Symbol.iterator]();;) {if (window.CP.shouldStopExecution(1)){break;}
+        var _ref;
+
+        if (_isArray) {
+            if (_i >= _iterator.length) break;
+            _ref = _iterator[_i++];
+        } else {
+            _i = _iterator.next();
+            if (_i.done) break;
+            _ref = _i.value;
+        }
+
+        var textInput = _ref;
+
+        textInput.addEventListener(events.keyUp, floatLabel);
+        textInput.addEventListener(events.blur, floatLabel);
+    }
+window.CP.exitedLoop(1);
+
+})();
+</script>
+<p>http://a11yproject.com/patterns.html</p>
+</body>
+</html>
