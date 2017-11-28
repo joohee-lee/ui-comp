@@ -185,5 +185,20 @@
 //overflow: hidden;
 //text-overflow: ellipsis;
 //white-space: nowrap;}
-//
+
+//background-image - use button theme
+@mixin background-image-color($bgcolor--1, $bgcolor--2, $bordercolor-top, $bordercolor-right-left, $bordercolor-btm){
+  background-image: -webkit-linear-gradient(top, $bgcolor--1 0%, $bgcolor--2 100%);
+  background-image: -o-linear-gradient(top, $bgcolor--1 0%, $bgcolor--2 100%);
+  background-image: linear-gradient(to bottom, $bgcolor--1 0%, $bgcolor--2 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2591ed', endColorstr='#ff1177cd', GradientType=0);
+  background-color: $bgcolor--1;
+  border-color: $bordercolor-top $bordercolor-right-left $bordercolor-btm;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  color: white;
+  font-weight: 400;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+
+}
 

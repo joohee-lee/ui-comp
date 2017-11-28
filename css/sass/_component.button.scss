@@ -59,22 +59,14 @@
         @include rem(font-size, 10px);
     }
 
-    //theme
+    //theme  border-color: #1177cd #0f6ab6 #0d5c9e;
     &--primary{
-        background-image: -webkit-linear-gradient(top, #2591ed 0%, #1177cd 100%);
-        background-image: -o-linear-gradient(top, #2591ed 0%, #1177cd 100%);
-        background-image: linear-gradient(to bottom, #2591ed 0%, #1177cd 100%);
-        background-repeat: repeat-x;
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2591ed', endColorstr='#ff1177cd', GradientType=0);
-        background-color: #1385e5;
-        border-color: #1177cd #0f6ab6 #0d5c9e;
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-        color: white;
-        font-weight: 400;
-        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        @include background-image-color(#2591ed, #2591ed, #1177cd, #0f6ab6, #0d5c9e);
     }
 
     &--success{
+        @include background-image-color(#43cd4f, #2fae39, #2fae39, #299a33, #24862c);
+        /*
         background-image: -webkit-linear-gradient(top, #43cd4f 0%, #2fae39 100%);
         background-image: -o-linear-gradient(top, #43cd4f 0%, #2fae39 100%);
         background-image: linear-gradient(to bottom, #43cd4f 0%, #2fae39 100%);
@@ -86,6 +78,15 @@
         color: white;
         font-weight: 400;
         text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        */
+    }
+
+    &--warning{
+        @include background-image-color(#f99533, #fa9f47, #ee7806, #f98515, #f9922e);
+    }
+
+    &--danger{
+        @include background-image-color(#df6c6c, #d64242, #d64242, #d12d2d, #bc2929);
     }
 }
 
